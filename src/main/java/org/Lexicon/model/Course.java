@@ -7,6 +7,7 @@ import org.Lexicon.Sequencer.SchoolSequencer;
 import java.time.LocalDate;
 
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Course {
@@ -15,7 +16,7 @@ public class Course {
     private String courseName;
     private final LocalDate startDate;
     private int weekDuration;
-    private List<Student> students;
+    private List<Student> students = new ArrayList<>();
 
 
     // Created two constructors : one where we can add only acourse without adding students to it AND ONE THAT CARRY ALL

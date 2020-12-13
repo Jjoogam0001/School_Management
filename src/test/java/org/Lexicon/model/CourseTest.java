@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 
 public class CourseTest {
 
+
     @Test
     public void addStudent() {
     }

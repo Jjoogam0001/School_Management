@@ -71,7 +71,11 @@ public class App
                     // Add student to a course
                     for (int i = 0; i < CourseDaoList.courses.size(); i++) {
                         if (courseName.equals(CourseDaoList.courses.get(i).getCourseName())) {
-                            CourseDaoList.courses.get(i).setStudents(svd.findbyName(studentsName));
+                            for(int k = 0; k < StudentDaoList.students.size();k++){
+                                if (studentsName.equals(StudentDaoList.students.get(k).getName())){
+                                    CourseDaoList.courses.get(i).addStudent(StudentDaoList.students.get(k));
+                                }
+                            }
                             System.out.println(cvd.findbyName(courseName));
                         }
 
