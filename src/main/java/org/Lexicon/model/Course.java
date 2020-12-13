@@ -1,12 +1,12 @@
 package org.Lexicon.model;
 
-import org.Lexicon.Sequencer.CourseSequencer;
+
 import org.Lexicon.Sequencer.DateSequencer;
 import org.Lexicon.Sequencer.SchoolSequencer;
 
 import java.time.LocalDate;
 
-import java.time.format.DateTimeFormatter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +19,6 @@ public class Course {
     private List<Student> students = new ArrayList<>();
 
 
-    // Created two constructors : one where we can add only acourse without adding students to it AND ONE THAT CARRY ALL
-
     public Course(String courseName, int weekDuration) {
         this.weekDuration = weekDuration;
         this.id = SchoolSequencer.getnextId();
@@ -28,11 +26,6 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public Course(Course Course, List<Student> students) {
-        this.id = CourseSequencer.getnextId();
-        this.startDate = DateSequencer.getDate();
-        this.students = students;
-    }
 
     public void addStudent(Student student){
         students.add(student);

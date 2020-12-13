@@ -26,10 +26,6 @@ public class CourseDaoListTest {
   @Before
   public void setUp(){
       course = new Course("Java Course",5);
-
-
-
-
   }
 
     @Test
@@ -51,16 +47,16 @@ public class CourseDaoListTest {
 
     @Test
     public void findbyName() {
-        String expected = ("["+ String.valueOf(CourseDaoList.courses.get(0))+"]");
-        String actual = String.valueOf(com.findbyName("Java Course"));
+        String expected = ("["+ CourseDaoList.courses.get(2) +"]");
+        String actual = String.valueOf(com.findbyName("C#"));
         assertEquals(expected,actual);
     }
 
     @Test
     public void findByDate() {
 
-        String expected = ("["+ String.valueOf(CourseDaoList.courses.get(0))+"]");
-        String date = "2020-12-12";
+        String expected = ("["+ CourseDaoList.courses.get(0) +"]");
+        String date = String.valueOf(CourseDaoList.courses.get(0).getStartDate());
         LocalDate LocalDate = java.time.LocalDate.parse(date);
         String actual = String.valueOf(com.findByDate(LocalDate));
         assertEquals(expected,actual);

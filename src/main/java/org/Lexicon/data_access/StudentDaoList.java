@@ -5,8 +5,6 @@ import org.Lexicon.model.Student;
 
 import java.util.*;
 
-import static java.util.Arrays.asList;
-
 public class StudentDaoList implements  StudentDao{
 
     public static List <Student> students = new ArrayList<>();
@@ -14,10 +12,6 @@ public class StudentDaoList implements  StudentDao{
     static {
         students.addAll(Arrays.asList(new Student("Martin", "jjooh@gmail.com", "Kristianstad"),new Student("Jimmy", "jjooh@gmail.com", "Kristianstad")));
     }
-
-
-
-
 
     @Override
     public Student saveStudent(Student student) {
