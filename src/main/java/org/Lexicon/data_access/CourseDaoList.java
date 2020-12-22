@@ -7,7 +7,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class CourseDaoList implements  CourseDao{
@@ -19,11 +18,6 @@ public class CourseDaoList implements  CourseDao{
         courses.add(new Course("JavaScript",9));
         courses.add(new Course("C#",11));
     }
-
-
-
-
-
 
 
 

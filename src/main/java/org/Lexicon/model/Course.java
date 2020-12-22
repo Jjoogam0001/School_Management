@@ -19,12 +19,17 @@ public class Course {
     private List<Student> students = new ArrayList<>();
 
 
+
+
+
     public Course(String courseName, int weekDuration) {
         this.weekDuration = weekDuration;
         this.id = SchoolSequencer.getnextId();
         startDate = DateSequencer.getDate();
         this.courseName = courseName;
     }
+
+
 
 
     public void addStudent(Student student){
@@ -71,18 +76,15 @@ public class Course {
     }
 
 
-
-
-
-
     @Override
     public String toString() {
         return "Course{" +
                 "id=" + id +
-                ", CourseName='" + courseName + '\'' +
+                ", courseName='" + courseName + '\'' +
                 ", startDate=" + startDate +
                 ", weekDuration=" + weekDuration +
                 ", students=" + students +
+
                 '}';
     }
 }
